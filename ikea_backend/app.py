@@ -24,8 +24,8 @@ def available_products():
 def sell_product(prod_id: int):
     if domain.does_product_exist(prod_id):
         if domain.get_product_availability(prod_id) >= 1:
-            product_compenent = domain.get_product_componenet(prod_id)
-            domain.update_inventory(product_compenent)
+            product_component = domain.get_product_components(prod_id)
+            domain.update_inventory(product_component)
             return {'message': "product was sold successfully"}
         return{'error': 'product out of stock'}
     return {'error': 'product does not exist'}

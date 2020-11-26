@@ -153,7 +153,7 @@ def does_product_exist(prod_id: int):
     return False
 
 
-def get_product_componenet(prod_id: int):
+def get_product_components(prod_id: int):
     db = get_db()
     product_compenent = db.query(model.ProductComponents).filter(
         model.ProductComponents.prod_id == prod_id).all()
