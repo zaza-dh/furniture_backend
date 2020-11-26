@@ -6,7 +6,7 @@ install:
 	pip install -e .
 
 run: 
-	python -m uvicorn ikea_backend.app:app --reload
+	python -m uvicorn ikea_backend.app:app
 
 lint:
 	flake8 rock_paper_scissors || isort --recursive .
